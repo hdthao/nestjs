@@ -17,6 +17,10 @@ import { ConfigModule } from '@nestjs/config';
       database: process.env.MYSQLDATABASE || process.env.DB_DATABASE,
       autoLoadEntities: true,
       synchronize: false,
+      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+      extra: {
+        connectionLimit: 10,
+      },
     }),
     TodoModule,
   ],
