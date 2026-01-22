@@ -23,8 +23,6 @@ import { ConfigModule } from '@nestjs/config';
       extra: {
         connectionLimit: 10,
         connectTimeout: 60000,
-        acquireTimeout: 60000,
-        timeout: 60000,
       },
     }),
     TodoModule,
