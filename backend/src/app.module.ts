@@ -13,7 +13,7 @@ import { ConfigModule } from '@nestjs/config';
       type: 'mysql',
       url: process.env.DATABASE_URL, // 🔥 QUAN TRỌNG
       autoLoadEntities: true,
-      synchronize: false,
+      synchronize: true,
       logging: process.env.NODE_ENV !== 'production',
     }),
 
