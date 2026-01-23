@@ -1,12 +1,10 @@
 import axios from 'axios';
 
-const baseURL =
-  import.meta.env.VITE_API_URL ||
-  'https://nestjs-production-98a6.up.railway.app';
+const baseURL = import.meta.env.VITE_API_URL
 
 const API_URL = `${baseURL}/todos`;
 
-console.log('API URL:', API_URL);
+console.log('API_URL:', API_URL);
 
 
 export const todoAPI = {
